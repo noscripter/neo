@@ -17,7 +17,9 @@
     "neo": "./bin/neo"
   },
   "scripts": {
-    "test": "npm explore $(node fixture) -- 'npm install && npm test'"
+    "test": "npm explore $(node fixture) -- 'npm install && npm test'",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "babel": {
     "presets": [
@@ -119,7 +121,8 @@
     "webpack-merge": "0.14.1",
     "worker-loader": "0.7.1",
     "yeoman-environment": "1.6.3",
-    "yeoman-generator": "0.24.1"
+    "yeoman-generator": "0.24.1",
+    "snyk": "^1.83.0"
   },
   "devDependencies": {
     "yeoman-test": "1.4.0"
@@ -127,5 +130,6 @@
   "bugs": {
     "url": "https://github.com/mozilla/neo/issues"
   },
-  "homepage": "https://github.com/mozilla/neo#readme"
+  "homepage": "https://github.com/mozilla/neo#readme",
+  "snyk": true
 }
