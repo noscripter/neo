@@ -17,7 +17,9 @@
     "neo": "./bin/neo"
   },
   "scripts": {
-    "test": "npm explore $(node fixture) -- 'npm install && npm test'"
+    "test": "npm explore $(node fixture) -- 'npm install && npm test'",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "babel": {
     "presets": [
@@ -96,15 +98,15 @@
     "imports-loader": "0.6.5",
     "isparta-instrumenter-loader": "1.0.1",
     "json-loader": "0.5.4",
-    "karma": "1.2.0",
+    "karma": "2.0.0",
     "karma-babel-preprocessor": "6.0.1",
     "karma-chai": "0.1.0",
     "karma-chrome-launcher": "1.0.1",
-    "karma-coverage": "1.1.1",
+    "karma-coverage": "1.1.2",
     "karma-mocha": "1.1.1",
     "karma-mocha-reporter": "2.1.0",
     "karma-sourcemap-loader": "0.3.7",
-    "karma-webpack": "1.8.0",
+    "karma-webpack": "2.0.10",
     "mocha": "3.0.2",
     "node-sass": "3.8.0",
     "qs": "6.2.1",
@@ -112,14 +114,15 @@
     "sass-loader": "4.0.0",
     "style-loader": "0.13.1",
     "url-loader": "0.5.7",
-    "vorpal": "1.4.1",
+    "vorpal": "1.5.7",
     "webpack": "1.13.1",
     "webpack-dev-server": "1.14.1",
     "webpack-hot-middleware": "2.12.2",
     "webpack-merge": "0.14.1",
     "worker-loader": "0.7.1",
     "yeoman-environment": "1.6.3",
-    "yeoman-generator": "0.24.1"
+    "yeoman-generator": "0.24.1",
+    "snyk": "^1.88.0"
   },
   "devDependencies": {
     "yeoman-test": "1.4.0"
@@ -127,5 +130,6 @@
   "bugs": {
     "url": "https://github.com/mozilla/neo/issues"
   },
-  "homepage": "https://github.com/mozilla/neo#readme"
+  "homepage": "https://github.com/mozilla/neo#readme",
+  "snyk": true
 }
