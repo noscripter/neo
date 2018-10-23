@@ -17,7 +17,9 @@
     "neo": "./bin/neo"
   },
   "scripts": {
-    "test": "npm explore $(node fixture) -- 'npm install && npm test'"
+    "test": "npm explore $(node fixture) -- 'npm install && npm test'",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "babel": {
     "presets": [
@@ -79,7 +81,7 @@
     "babel-preset-stage-0": "6.5.0",
     "babel-runtime": "6.11.6",
     "chai": "3.5.0",
-    "chai-enzyme": "0.5.0",
+    "chai-enzyme": "0.5.1",
     "clean-webpack-plugin": "0.1.10",
     "css-loader": "0.23.1",
     "deepmerge": "0.2.10",
@@ -119,7 +121,8 @@
     "webpack-merge": "0.14.1",
     "worker-loader": "0.7.1",
     "yeoman-environment": "1.6.3",
-    "yeoman-generator": "0.24.1"
+    "yeoman-generator": "2.0.5",
+    "snyk": "^1.104.2"
   },
   "devDependencies": {
     "yeoman-test": "1.4.0"
@@ -127,5 +130,6 @@
   "bugs": {
     "url": "https://github.com/mozilla/neo/issues"
   },
-  "homepage": "https://github.com/mozilla/neo#readme"
+  "homepage": "https://github.com/mozilla/neo#readme",
+  "snyk": true
 }
